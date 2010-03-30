@@ -1,4 +1,4 @@
 Modifier: Christopher Peplin
 
-|~ViewToolbar|closeTiddler closeOthers +editHtml > fields syncing permalink revisions references jump|
+|~ViewToolbar|closeTiddler closeOthers +editJsvi > fields syncing permalink revisions references jump|
 |~EditToolbar|+saveTiddler -cancelTiddler deleteTiddlerHosted|
