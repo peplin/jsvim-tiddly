@@ -1,4 +1,4 @@
-.editor {
+.jsvi-editor {
 	color: #333;
 	background-color: #eee;
     height: 200px;
@@ -9,12 +9,12 @@ html,body {
 	padding: 0;
 	height: 100%;
 }
-.print, .editor, .editorcursor { display: none; }
+.jsvi-print, .jsvi-editor, .jsvi-editorcursor { display: none; }
 @media print {
-	.editor { display:none !important; }
+	.jsvi-editor { display:none !important; }
 	html,body { overflow:auto !important; }
-	.editorcursor { display:none !important; }
-	.print {position:absolute;top:0;left:0;display:block !important;font-family:monospace;height:100%;}
-	.editortools {display:none !important;}
+	.jsvi-editorcursor { display:none !important; }
+	.jsvi-print {position:absolute;top:0;left:0;display:block !important;font-family:monospace;height:100%;}
+	.jsvi-editortools {display:none !important;}
 	textarea,input { display:none !important;}
 }

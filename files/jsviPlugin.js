@@ -92,4 +92,8 @@ config.commands.editJsvi = {
     }
 };
 
+config.shadowTiddlers.EditJsviTemplate = 
+        config.shadowTiddlers.EditTemplate.replace(
+                /macro='edit text'/, "macro='editJsvi text'");
+
 //}}}

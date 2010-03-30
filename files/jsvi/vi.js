@@ -3641,9 +3641,9 @@ function editor(t) {
 //		document.body.height = '100%';
 //	}
 
-	printer.className = 'print';
-	cursor.className = 'editorcursor';
-	term.className = 'editor';
+	printer.className = 'jsvi-print';
+	cursor.className = 'jsvi-editorcursor';
+	term.className = 'jsvi-editor';
 
 	suggest.style.position = 'absolute';
 	suggest.style.display = 'none';
@@ -3665,7 +3665,7 @@ function editor(t) {
 	if (window.addEventListener) {
 		window.addEventListener('DOMMouseScroll',_mousescroll,false);
 	}
-	tools.className = 'editortools';
+	tools.className = 'jsvi-editortools';
 	tools.style.position = 'absolute';
 	tools.style.right = '0px';
 	tools.style.bottom = '0px';
