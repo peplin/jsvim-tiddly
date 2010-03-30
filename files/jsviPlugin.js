@@ -27,9 +27,10 @@ config.macros.editJsvi = {
             config.macros.edit.handler(
                     place, macroName, params, wikifier, paramString, tiddler);
         } else if (field) {
-            var e = createTiddlyElement(null,"div");
+            var e = createTiddlyElement(null, "div");
             e.setAttribute("id", "jsvi-result");
             e.setAttribute("editJsvi",field);
+            e.setAttribute("tiddlerTitle", tiddler.title);
             if(tiddler.isReadOnly()) {
                 e.setAttribute("readOnly","readOnly");
             }
@@ -43,6 +44,7 @@ config.macros.editJsvi = {
             //editor.BasePath = config.options.txtjsviPath;
             //editor.Height = height;
 
+            //TODO do parsing here to set first line of VI file as title
             var re = /^<html>(.*)<\/html>$/m;
             var fieldValue = store.getValue(tiddler, field);
             var htmlValue = re.exec(fieldValue);

@@ -3558,8 +3558,10 @@ function editor_disable(sav) {
 
 	_cbrestore();
 
+    var tiddlerTitle = "";
 	if (term._formelement) {
 		if (sav) term._formelement.value = term_freeze();
+        tiddlerTitle = term._formelement.getAttribute("tiddlerTitle");
 
 		// disconnect
 		term._formelement = undefined;
@@ -3592,6 +3594,8 @@ function editor_disable(sav) {
 	if (document.focus) document.focus();
 
 	document.body.style.overflow = '';
+    // TODO reorganize jsvim to accept a callback for this
+    story.saveTiddler(tiddlerTitle, false);
 }
 function _cursor_fix() {
 	term_cur_width = cursor.offsetWidth;
