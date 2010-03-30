@@ -79,10 +79,6 @@ Story.prototype.gatherSaveFields = function(e, fields){
     }
 };
 
-config.shadowTiddlers.EditJsviTemplate = 
-        config.shadowTiddlers.EditTemplate.replace(
-                /macro='edit text'/, "macro='editJsvi text'");
-
 config.commands.editJsvi = {
     text: "vi",
     tooltip: "Edit this tiddler with jsvi",
@@ -95,9 +91,5 @@ config.commands.editJsvi = {
         return false;
     }
 };
-
-config.shadowTiddlers.ViewTemplate = 
-        config.shadowTiddlers.ViewTemplate.replace(
-        /\+editTiddler/, "+editTiddler editJsvi");
 
 //}}}
